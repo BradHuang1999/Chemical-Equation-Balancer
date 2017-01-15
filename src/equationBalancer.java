@@ -25,7 +25,22 @@ public class equationBalancer {
     //randomEquation generater gives possibilities when random button is clicked
     static double[] atomicMass = {0, 1.01, 4.00, 6.94, 9.01, 10.81, 12.01, 14.01, 16.00, 19.00, 20.18, 22.99, 24.31, 26.98, 28.09, 30.97, 32.07, 35.45, 39.10, 39.95, 40.08, 44.96, 47.87, 50.94, 52.00, 54.94, 55.85, 58.69, 58.93, 63.55, 65.39, 69.72, 72.64, 74.92, 78.96, 79.90, 83.80, 85.47, 87.62, 88.91, 91.22, 92.91, 95.94, 98.00, 101.07, 102.91, 106.42, 107.87, 112.41, 114.82, 118.71, 121.76, 126.90, 127.60, 131.29, 132.91, 137.33, 138.91, 140.12, 140.91, 144.24, 145.00, 150.36, 151.96, 157.25, 158.93, 162.50, 164.93, 167.26, 168.93, 173.04, 174.97, 178.49, 180.95, 183.84, 186.21, 190.23, 192.22, 195.08, 196.97, 200.59, 204.38, 207.20, 208.98, 209.00, 210.00, 222.00, 223.00, 226.00, 227.00, 231.04, 232.04, 237.00, 238.03, 243.00, 244.00, 247.00, 247.00, 251.00, 252.00, 257.00, 258.00, 259.00, 261.00, 262.00, 262.00, 264.00, 266.00, 268.00, 272.00, 277.00, 723.23};
     static String[] elementName = {null, "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "K", "Ar", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Ni", "Co", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "I", "Te", "Xe", "Cs", "Ba", "La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Pa", "Th", "Np", "U", "Am", "Pu", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Rf", "Lr", "Db", "Bh", "Sg", "Mt", "Rg", "Hs", "Brch"};
-    static String[] randomEquations = {"Brch + CuSO4 = Brch2(SO4)3 + Cu", "CuSO4*5H2O = CuSO4 + H2O", "PhCH3 + KMnO4 + H2SO4 = PhCOOH + K2SO4 + MnSO4 + H2O", "Cr2O7[2-] + H[+] = Cr[3+] + H2O", "K4Fe(CN)6 + KMnO4 + H2SO4 = KHSO4 + Fe2(SO4)3 + MnSO4 + HNO3 + CO2 + H2O", "Fe + Cl2 = FeCl3", "N = N2", "A3[-] + B2[2+] = A5B", "C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2", "Foo[5+] + Bar[3-] = FooBar2 + FooBar[-]", "ICl + H2O = Cl[-] + IO3[-] + I2 + H[+]", "HNO3 + Cu = Cu(NO3)2 + H2O + NO", "AB2 + AC3 + AD5 + AE7 + AF11 + AG13 + AH17 + AI19 + AJ23 = A + ABCDEFGHIJ", "C3H8O + O2 = CO2 + H2O", "C = N2", "H + O = H2 + O2", "P4 + OH[-] + H2O = H2PO2[-] + P2H4"};
+    static String[] randomEquations = {
+            "Brch + CuSO4 = Brch2(SO4)3 + Cu",
+            "CuSO4*5H2O = CuSO4 + H2O",
+            "PhCH3 + KMnO4 + H2SO4 = PhCOOH + K2SO4 + MnSO4 + H2O",
+            "Cr2O7[2-] + H[+] = Cr[3+] + H2O",
+            "K4Fe(CN)6 + KMnO4 + H2SO4 = KHSO4 + Fe2(SO4)3 + MnSO4 + HNO3 + CO2 + H2O",
+            "Fe + Cl2 = FeCl3", "N = N2", "A3[-] + B2[2+] = A5B",
+            "C 3 H 5 ( O H ) 3 + O 2 = H 2 O + C O 2",
+            "Foo[5+] + Bar[3-] = FooBar2 + FooBar[-]",
+            "ICl + H2O = Cl[-] + IO3[-] + I2 + H[+]",
+            "HNO3 + Cu = Cu(NO3)2 + H2O + NO",
+            "AB2 + AC3 + AD5 + AE7 + AF11 + AG13 + AH17 + AI19 + AJ23 = A + ABCDEFGHIJ",
+            "C3H8O + O2 = CO2 + H2O",
+            "C = N2",
+            "H + O = H2 + O2",
+            "P4 + OH[-] + H2O = H2PO2[-] + P2H4"};
 
     //JFrame title
     static JFrame myWindow = new JFrame("Chemical Equation Balancer and Stoichiometry Calculator by BRCH ACADEMIC");
@@ -34,14 +49,8 @@ public class equationBalancer {
     static JPanel resultPanel = new JPanel(); //static so keylistener and action listener can be used later
     static JPanel endPanel = new JPanel();
 
-    static JButton firstButton;
-    static JButton finalize;
-
     static JTextField firstField;
     static JLabel resultLabel = new JLabel("", SwingConstants.CENTER); //use this to center all text
-
-    static final String html1 = "<html><body style='width: "; //alters format and makes balanced equation aligned to center
-    static final String html2 = "px'>";
 
     static JLabel[] compoundLabel; //arrays to match with the above created arrays
     static JLabel[] coeffLabel; //values from arrays will go into the these labels and textfields
@@ -52,8 +61,8 @@ public class equationBalancer {
     static boolean molar; //molar mass integer
 
     public static void main(String[] args) {
-        myWindow.setSize(800, 150);
-        myWindow.setLayout(new BorderLayout(15, 40)); //borderLayout for window
+        myWindow.setSize(1034, 80);
+        myWindow.setLayout(new BorderLayout(40, 40)); //borderLayout for window
 
         myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myWindow.setResizable(false); //not resizable to prevent layout glitches or changes
@@ -61,15 +70,25 @@ public class equationBalancer {
         JLabel inputLabel = new JLabel("Input:    ");
         inputLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 17)); //set Font
 
-        firstField = new JTextField("Enter the Chemical Equation Here", 40); //40 character space for long equations
+        firstField = new JTextField("Enter the Chemical Equation Here", 40);
         firstField.selectAll();
         firstField.setFont(new Font("Malgun Gothic", Font.PLAIN, 16));
 
         JButton firstButton = new JButton("Balance!");
-        firstButton.addActionListener(new balanceListener()); //links the balance button to an action listener
+        firstButton.addActionListener(event -> {
+            eqn = firstField.getText();  //get text from user
+            calc(eqn); //calculate method
+            myWindow.revalidate(); //revalidates and refreshes the window
+        }); //links the balance button to an action listener
 
         JButton secondButton = new JButton("Random");
-        secondButton.addActionListener(new randomListener()); //links the random button to an action listener
+        secondButton.addActionListener(event -> {
+            Random rdm = new Random();
+            eqn = randomEquations[rdm.nextInt(17)]; //takes random from randomEquation list
+            firstField.setText(eqn); //sets the text to the selected equation
+            calc(eqn); //runs calculation method
+            myWindow.revalidate(); //revalidates and refreshes the window
+        }); //links the random button to an action listener
 
         startPanel.add(inputLabel);
         startPanel.add(firstField);
@@ -77,58 +96,28 @@ public class equationBalancer {
         startPanel.add(secondButton);
         myWindow.add(startPanel, BorderLayout.NORTH); //add the input bar to the top of the window
 
-        myWindow.pack(); //shrinks the whole window in an efficient manner
         myWindow.setLocationRelativeTo(null);
         myWindow.setVisible(true);
 
         while (eqn == null) {  //infinite loop
         }
 
-        resultPanel.setLayout(new BorderLayout(100, 15));
-
         JLabel noticeLabel = new JLabel("         Balanced Equation: ");
         noticeLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 17));
         resultPanel.add(noticeLabel, BorderLayout.NORTH);
-
-        resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        resultPanel.add(resultLabel, BorderLayout.CENTER);
-
-        JLabel blankSpace1 = new JLabel("        "); //blankspace to help with border layout to even it
-        JLabel blankSpace2 = new JLabel("        ");
-        resultPanel.add(blankSpace1, BorderLayout.WEST);
-        resultPanel.add(blankSpace2, BorderLayout.EAST);
-
     }
 
-    static class randomListener implements ActionListener { //ActionListener for random button
-        public void actionPerformed(ActionEvent event) {
-            Random rdm = new Random();
-            eqn = randomEquations[rdm.nextInt(17)]; //takes random from randomEquation list
-            firstField.setText(eqn); //sets the text to the selected equation
-            calc(eqn); //runs calculation method
-            myWindow.revalidate(); //revalidates and refreshes the window
-        }
-    }
-
-    static class balanceListener implements ActionListener { //ActionListener for balance button
-        public void actionPerformed(ActionEvent event) {
-            eqn = firstField.getText();  //get text from user
-            calc(eqn); //calculate method
-            myWindow.revalidate(); //revalidates and refreshes the window
-        }
-    }
-
-    public static class keyListener implements KeyListener { //keyListener for instataneous molar mass to mass ratio calculations
+    public static class keyListener implements KeyListener {    //keyListener for instataneous molar mass to mass ratio calculations
         int columnNum = compoundColumnNum;
         boolean isMolarMassField = molar;
 
-        public void keyTyped(KeyEvent e) {  //key events make appropriate mass changes immediatiely
+        public void keyTyped(KeyEvent e) {
         }
 
         public void keyPressed(KeyEvent e) {
         }
 
-        public void keyReleased(KeyEvent e) {
+        public void keyReleased(KeyEvent e) {   //key events make appropriate mass changes immediatiely
             try {
                 if (isMolarMassField){
                     comps[columnNum].molarMass = Double.parseDouble(molarMassField[columnNum].getText());
@@ -163,30 +152,27 @@ public class equationBalancer {
             balanced = balance(mtx);
             for (int i = 0; i < compNum; i++) {
                 comps[i].num = balanced[i]; //for loop to advance comps.num by 1 each time until the limit is reached
-            } //the answer to the mole numbers
+            }   //the answer to the mole numbers
 
             chargeTot = 0;
             for (int i = 0; i < compNum; i++) {
                 chargeTot += comps[i].charge * booInt(comps[i].lr) * balanced[i];
-                //System.out.print(comps[i].molarMass + " ");
-                // attemts at programming left here to demonstrate trial and error
             }
-            //System.out.println(chargeTot);
 
             String balancedEqn = format(balanced);
-            //System.out.println(balancedEqn);
+            resultLabel.setText(balancedEqn); //format, width 600
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
 
-            compoundLabel = new JLabel[compNum]; //comps[i].name
-            coeffLabel = new JLabel[compNum]; //comps[i].num
-            molarMassField = new JTextField[compNum]; //comps[i].molarMass
-            massField = new JTextField[compNum]; //comps[i].num * comps[i].molarMass
-
-            resultLabel.setText(html1 + "600" + html2 + balancedEqn); //format, width 600
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
 
             endPanel.removeAll();
-            endPanel.setLayout(new GridLayout(compNum + 1, 4, 10, 5)); //grid layout (amount of compounds with arrays)
+            endPanel.setLayout(new GridLayout(compNum + 1, 4, 10, 5));  //grid layout (amount of compounds with arrays)
 
-            // final panel with molar mass, mass and stoich GUI display all aligned to center
+            //final panel with molar mass, mass and stoich GUI display all aligned to center
             JLabel title1Label = new JLabel("Compound", SwingConstants.CENTER);
             JLabel title2Label = new JLabel("Coefficient", SwingConstants.CENTER);
             JLabel title3Label = new JLabel("Molar Mass(g/mol)", SwingConstants.CENTER);
@@ -196,7 +182,12 @@ public class equationBalancer {
             endPanel.add(title3Label);
             endPanel.add(title4Label);
 
-            // sets new fonts
+            compoundLabel = new JLabel[compNum];        //comps[i].name
+            coeffLabel = new JLabel[compNum];           //comps[i].num
+            molarMassField = new JTextField[compNum];   //comps[i].molarMass
+            massField = new JTextField[compNum];        //comps[i].num * comps[i].molarMass
+
+            //sets new fonts
             Font compsFont = new Font("Arial", Font.BOLD, 16);
             Font numFont = new Font("Arial", Font.BOLD, 14);
 
@@ -211,7 +202,7 @@ public class equationBalancer {
                 if (comps[compoundColumnNum].molarMass != -1){
                     molarMassField[compoundColumnNum] = new JTextField(String.valueOf(comps[compoundColumnNum].molarMass), 10);
                 } else {
-                    molarMassField[compoundColumnNum] = new JTextField("", 5); //uses blank spaces to ensure proper alignment and centralization
+                    molarMassField[compoundColumnNum] = new JTextField("", 5);  //uses blank spaces to ensure proper alignment and centralization
                 }
 
                 molarMassField[compoundColumnNum].setFont(numFont);
@@ -236,63 +227,88 @@ public class equationBalancer {
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.add(endPanel, BorderLayout.SOUTH);
             myWindow.pack();
-            myWindow.setLocationRelativeTo(null);
-            myWindow.revalidate();
 
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (ArrayIndexOutOfBoundsException e) {    //if array out of bounds, myWindow will be re-composed and revalidated to prevent error going from correct to error
             System.err.println("Syntax error! error code: 1");
-            resultLabel.setText("Syntax error!");
-            JLabel blankSpace3 = new JLabel("        ");
-            resultPanel.add(blankSpace3, BorderLayout.SOUTH);
+            resultLabel.setText("<html><body style='width: 600px; text-align: center'>Syntax error!</html>");
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
+            resultPanel.add(new JLabel("        "), BorderLayout.SOUTH);
+
             myWindow.remove(endPanel);
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.pack();
-            myWindow.revalidate();
-            //if array out of bounds, myWindow will be re-composed and revalidated to prevent error going from correct to error
-        } catch (StringIndexOutOfBoundsException e) {
+
+        } catch (StringIndexOutOfBoundsException e) {   //if string index out of bounds, myWindow will be re-composed and revalidated to prevent error going from correct to error
             System.err.println("Syntax error! error code: 2");
-            resultLabel.setText("Syntax error!");
-            JLabel blankSpace3 = new JLabel("        ");
-            resultPanel.add(blankSpace3, BorderLayout.SOUTH);
+            resultLabel.setText("<html><body style='width: 600px; text-align: center'>Syntax error!</html>");
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
+            resultPanel.add(new JLabel("        "), BorderLayout.SOUTH);
+
             myWindow.remove(endPanel);
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.pack();
-            myWindow.revalidate();
-            //if string index out of bounds, myWindow will be re-composed and revalidated to prevent error going from correct to error
-        } catch (NullPointerException e) {
+
+        } catch (NullPointerException e) {  //if null pointer is out of the specified, myWindow will be re-composed and revalidated to prevent error going from correct to error
             System.err.println("Syntax error! error code: 3");
-            resultLabel.setText("Syntax error!");
-            JLabel blankSpace3 = new JLabel("        ");
-            resultPanel.add(blankSpace3, BorderLayout.SOUTH);
+            resultLabel.setText("<html><body style='width: 600px; text-align: center'>Syntax error!</html>");
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
+            resultPanel.add(new JLabel("        "), BorderLayout.SOUTH);
+
             myWindow.remove(endPanel);
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.pack();
-            myWindow.revalidate();
-            //if null pointer is out of the specified, myWindow will be re-composed and revalidated to prevent error going from correct to error
-        } catch (MISException e) {
+
+        } catch (MISException e) {  //if equation does not make chemical sense, myWindow will be re-composed and revalidated to prevent error going from correct to error
             System.err.println("Multiple Independent Solutions! error code: 4 " + e.getMessage());
-            resultLabel.setText("Multiple Independent Solutions!");
-            JLabel blankSpace3 = new JLabel("        ");
-            resultPanel.add(blankSpace3, BorderLayout.SOUTH);
+            resultLabel.setText("<html><body style='width: 600px; text-align: center'>Multiple Independent Solutions!</html>");
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
+            resultPanel.add(new JLabel("        "), BorderLayout.SOUTH);
+
             myWindow.remove(endPanel);
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.pack();
-            myWindow.revalidate();
-            //if equation does not make chemical sense, myWindow will be re-composed and revalidated to prevent error going from correct to error
-        } catch (AllZeroException e) {
+
+        } catch (AllZeroException e) {  //if there is no solution, myWindow will be re-composed and revalidated to prevent error going from correct to error
             System.err.println("All-zero solution! error code: 5");
-            resultLabel.setText("All-zero solution!");
-            JLabel blankSpace3 = new JLabel("        ");
-            resultPanel.add(blankSpace3, BorderLayout.SOUTH);
+            resultLabel.setText("<html><body style='width: 600px; text-align: center'>All-zero solution!</html>");
+            resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
+
+            resultPanel.removeAll();
+            resultPanel.setLayout(new BorderLayout(100, 15));
+            resultPanel.add(resultLabel, BorderLayout.CENTER);
+            resultPanel.add(new JLabel("        "), BorderLayout.WEST);
+            resultPanel.add(new JLabel("        "), BorderLayout.EAST);
+            resultPanel.add(new JLabel("        "), BorderLayout.SOUTH);
+
             myWindow.remove(endPanel);
             myWindow.add(resultPanel, BorderLayout.CENTER);
             myWindow.pack();
-            myWindow.revalidate();
-            //if there is no solution, myWindow will be re-composed and revalidated to prevent error going from correct to error
         }
-
     }
-
 
     public static double[][] parse(String eqn) throws MISException {
         eqn = eqn.replaceAll("\\s+", "");     // remove all spaces from the equation
@@ -360,7 +376,7 @@ public class equationBalancer {
     }
 
     public static String format(int[] atomicNums) { //formatting and colour, using html to bypass border layout restrictions
-        String balancedEqn = "<html>";
+        String balancedEqn = "<html><body style='width: 600px; text-align: center'>";
         for (int i = 0; i < compNum; i++) {
             if (i != 0)
                 balancedEqn += " "; //provide a space for formatting

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2f9ab41-b4e2-4aa7-ab26-3b1b00efc9c1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer$Compound.class" afterPath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer$Compound.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer$Element.class" afterPath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer$Element.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer.class" afterPath="$PROJECT_DIR$/out/production/Chemical Equation Balancer/equationBalancer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/equationBalancer.java" afterPath="$PROJECT_DIR$/src/equationBalancer.java" />
     </list>
@@ -29,10 +28,10 @@
       <file leaf-file-name="equationBalancer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/equationBalancer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="231" column="59" selection-start-line="231" selection-start-column="59" selection-end-line="231" selection-end-column="59" />
+            <state relative-caret-position="-306">
+              <caret line="172" column="119" selection-start-line="172" selection-start-column="119" selection-end-line="172" selection-end-column="119" />
               <folding>
-                <element signature="e#0#38629#0" expanded="true" />
+                <element signature="e#0#39498#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -452,6 +451,14 @@
       <option name="presentableId" value="Default" />
       <updated>1484445772548</updated>
     </task>
+    <task id="LOCAL-00001" summary="0114">
+      <created>1484448076056</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1484448076056</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -499,8 +506,22 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0114" />
+    <option name="LAST_COMMIT_MESSAGE" value="0114" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/equationBalancer.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -513,7 +534,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38629#0" expanded="true" />
+            <element signature="e#0#39498#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -523,7 +544,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38629#0" expanded="true" />
+            <element signature="e#0#39498#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -532,6 +553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -553,10 +575,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/equationBalancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="231" column="59" selection-start-line="231" selection-start-column="59" selection-end-line="231" selection-end-column="59" />
+        <state relative-caret-position="-306">
+          <caret line="172" column="119" selection-start-line="172" selection-start-column="119" selection-end-line="172" selection-end-column="119" />
           <folding>
-            <element signature="e#0#38629#0" expanded="true" />
+            <element signature="e#0#39498#0" expanded="true" />
           </folding>
         </state>
       </provider>
