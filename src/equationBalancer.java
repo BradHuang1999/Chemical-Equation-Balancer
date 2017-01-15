@@ -130,8 +130,9 @@ public class equationBalancer {
 
         public void keyReleased(KeyEvent e) {
             try {
-                if (isMolarMassField)
+                if (isMolarMassField){
                     comps[columnNum].molarMass = Double.parseDouble(molarMassField[columnNum].getText());
+                }
                 calculateMass(Double.parseDouble(massField[columnNum].getText()) / comps[columnNum].molarMass / comps[columnNum].num, isMolarMassField, columnNum);
             } catch (NumberFormatException ex) { //if molarMassField is equal the the source of keyListener, above equation runs again to calculate
                 calculateMass(0, isMolarMassField, columnNum);
@@ -207,10 +208,11 @@ public class equationBalancer {
                 coeffLabel[compoundColumnNum] = new JLabel(String.valueOf(comps[compoundColumnNum].num), SwingConstants.CENTER); //CENTERED
                 coeffLabel[compoundColumnNum].setFont(compsFont);
 
-                if (comps[compoundColumnNum].molarMass != -1)
+                if (comps[compoundColumnNum].molarMass != -1){
                     molarMassField[compoundColumnNum] = new JTextField(String.valueOf(comps[compoundColumnNum].molarMass), 10);
-                else
+                } else {
                     molarMassField[compoundColumnNum] = new JTextField("", 5); //uses blank spaces to ensure proper alignment and centralization
+                }
 
                 molarMassField[compoundColumnNum].setFont(numFont);
                 molar = true;
@@ -219,6 +221,7 @@ public class equationBalancer {
                 massField[compoundColumnNum] = new JTextField("", 5);
                 massField[compoundColumnNum].setFont(numFont);
                 molar = false; //not molar (boolean false)
+
                 //to mark the source of the following listener's mass instead of the molar mass
                 massField[compoundColumnNum].addKeyListener(new keyListener());
 
@@ -499,7 +502,6 @@ public class equationBalancer {
     }
 
     public static int parseElements(String eqn) {    // accumulate element numbers and form each element
-
         ArrayList<String> list = new ArrayList<String>();
         char[] eqnArr = eqn.toCharArray();
         int elmtNum, frontNum;
